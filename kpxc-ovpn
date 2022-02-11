@@ -5,4 +5,4 @@
 
 printf "Type your KeePassXC vault password:\n"
 CREDS=$(keepassxc-cli show "$VAULT" "$KEY" -a UserName -a Password -q)
-printf "%s" "$CREDS" | sudo openvpn --config "$OVPNFILE" --auth-nocache --auth-user-pass /dev/stdin
+printf "%s" "$CREDS" | sudo openvpn --config "$OVPNFILE" --auth-user-pass /dev/stdin
